@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vertical-menu</title>
+    <title>Vertical Menu</title>
     <style>
-      
         ul.vertical-menu {
             list-style-type: none; 
             margin: 0;
@@ -14,12 +13,11 @@
             background-color: #0800ff; 
         }
 
-       
         li {
             position: relative; 
         }
 
-       a {
+        a {
             display: block;
             color: white;
             padding: 12px;
@@ -32,8 +30,7 @@
             background-color: #00b3ff; 
         }
 
-       
-         li ul {
+        li ul {
             display: none; 
             position: absolute;
             left: 200px; 
@@ -44,7 +41,7 @@
             background-color: #444;
         }
 
-         li ul li a {
+        li ul li a {
             padding: 12px;
             background-color: #869d00;
             color: white;
@@ -55,9 +52,14 @@
             background-color: #00ff6e;
         }
 
-  
-         li:hover > ul {
+        li:hover > ul {
             display: block;
+        }
+
+        /* Styles for submenus inside submenus */
+        li ul li ul {
+            left: 150px; /* Adjust the position of the second-level submenu */
+            top: 0; /* Align top */
         }
 
     </style>
@@ -70,14 +72,24 @@
         <li><a href="#">Item3</a>
             <ul>
                 <li><a href="#">Item3.1</a></li>
-                <li><a href="#">Item3.2</a></li>
+                <li><a href="#">Item3.2</a>
+                    <ul>
+                        <li><a href="#">Item3.2.1</a></li>
+                        <li><a href="#">Item3.2.2</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Item3.3</a></li>
             </ul>
         </li>
         <li><a href="#">Item4</a>
             <ul>
                 <li><a href="#">Item4.1</a></li>
-                <li><a href="#">Item4.2</a></li>
+                <li><a href="#">Item4.2</a>
+                    <ul>
+                        <li><a href="#">Item4.2.1</a></li>
+                        <li><a href="#">Item4.2.2</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Item4.3</a></li>
             </ul>
         </li>
